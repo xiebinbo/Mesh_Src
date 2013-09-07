@@ -14,6 +14,7 @@ Edge::Edge(Vertex *v1, Vertex *v2)
   vertices[0]=v1;   v1->addEdge(this);
   vertices[1]=v2;   v2->addEdge(this);
 
+
   nr_tri=0;
 
   calc_properties();
