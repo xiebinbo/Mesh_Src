@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src_main.cpp" />
+    <ClCompile Include="glut\glmesh.cpp">
+      <Filter>glut</Filter>
+    </ClCompile>
+    <ClCompile Include="glut\glmesh_common.cpp">
+      <Filter>glut</Filter>
+    </ClCompile>
+    <ClCompile Include="mathvector\mathvector.cpp">
+      <Filter>mathvector</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\edge.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\mesh.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\ply_mesh.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\shape.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\triangle.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\vertex.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="glut">
+      <UniqueIdentifier>{4dab4f96-bffe-43bf-ad15-6dd952ebb9a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mathvector">
+      <UniqueIdentifier>{ff28a3b4-460d-4bc8-8342-50449c505687}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mesh">
+      <UniqueIdentifier>{9494d61c-4475-4540-ae4b-453b9d82df6a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="glut\glmesh.h">
+      <Filter>glut</Filter>
+    </ClInclude>
+    <ClInclude Include="mathvector\mathvector.h">
+      <Filter>mathvector</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\edge.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\matrix3.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\mesh.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\misc.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\ply_mesh.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\shape.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\triangle.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\vertex.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
