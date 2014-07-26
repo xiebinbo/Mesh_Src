@@ -143,6 +143,15 @@ double MathVector::length(const MathVector *v1, const MathVector *v2)
   return c.length();
 }
 
+double MathVector::length2(const MathVector *v1, const MathVector *v2)
+{
+	MathVector c;
+
+	sub(v1, v2, &c);
+
+	return c.length2();
+}
+
 void MathVector::add(const MathVector *v1, const MathVector *v2, 
 		     MathVector *result)
 {

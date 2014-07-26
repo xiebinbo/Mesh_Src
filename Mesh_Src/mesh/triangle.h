@@ -54,6 +54,7 @@ public:
   vector<Triangle*> neighbors(void) const;
   vector<Triangle*> neighbors_on_plane(void) const;
   int get_surrounding_plane(void) const;
+  MathVector* get_surface_normal(void);
 
   Edge *edges[3];
   Vertex *vertices[3];

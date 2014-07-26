@@ -40,6 +40,9 @@ public:
   float z(void) const;
   const float* float_data(void) const;
   const MathVector* math_data(void) const;
+  const MathVector* math_newdata(void) const;
+  const MathVector* math_lapcoor(void) const;
+  MathVector* math_quantized_lapcoor(void);
 
   const float* float_normal(void) const;
   void add_normal(const MathVector *norm);
@@ -60,8 +63,29 @@ public:
   static float distance(const Vertex *v1, const Vertex *v2);
 
   int operator<(const Vertex &v) const;
-
-  unsigned int name, number;
+	void get_neighborvertexs(void);
+	MathVector* ucmath_data(void);
+	void computer_GaussCurvature(void);
+	void compute_square_devaition_angle(void);
+	double geometric_laplacian(void);
+  unsigned int name, number,blockid;
+  bool is_segment_traversed;
+  bool is_laplacian_lost;
+  bool is_visited;
+  int to_anthor_length;
+  int color[3];
+  int dye;//dye==-1表示未着色
+  float curvature;
+  float square_devaition_angle;
+  double Sq;
+  double Mq;
+  //xbb
+  list<Vertex*> neighborvertex;//存放邻接点
+  list<Vertex*> segmented_neighborvertex;//分割之后顶点的邻接点
+  list<Vertex*> segmented_neighborvertex2;
+  MathVector quantized_lapcoor;
+  MathVector newdata;//存储新的坐标
+  MathVector lapcoor;//laplacian 差值
 
 private:
   MathVector *normal, data;

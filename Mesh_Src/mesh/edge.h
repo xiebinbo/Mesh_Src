@@ -40,11 +40,13 @@ class Edge
   const float* centroid(void) const;
   const MathVector* math_centroid(void) const;
   const MathVector* math_orientation(void) const;
+  void compute_angle(void);
 
   Vertex *vertices[2];
   list<Triangle*> triangles;
 
   unsigned int nr_tri, number, name;
+  float _angle;//边所在的两三角形的夹角
 
  private:
   float edge_length;

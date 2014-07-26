@@ -15,7 +15,7 @@
 #include <wctype.h>
 
 //using namespace std;
-#define  M_PI  3.14156
+#define  M_PI  3.14159
 #define MAXFLOAT  999999.99999
 #define TRUE 1
 #define FALSE 0

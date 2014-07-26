@@ -238,6 +238,11 @@ int Triangle::get_surrounding_plane(void) const
   return 0;
 }
 
+MathVector* Triangle::get_surface_normal()
+{
+	return &surface_normal;
+}
+
 int Triangle::change_vertex(const Vertex *old_v, Vertex *new_v)
 {
   int i=0;

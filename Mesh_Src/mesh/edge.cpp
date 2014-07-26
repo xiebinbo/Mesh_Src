@@ -139,3 +139,22 @@ const MathVector* Edge::math_centroid(void) const
 {
   return &edge_centroid;
 }
+
+void Edge::compute_angle()
+{
+	list<Triangle*>::iterator _ltri;
+	Triangle *tri1,*tri2;
+	if(triangles.size()==2)
+	{
+		_ltri = triangles.begin();
+		tri1 = (*_ltri);
+		_ltri++;
+		tri2 = (*_ltri);
+		_angle = acos(MathVector::dot_product(tri1->math_normal(),tri2->math_normal())/(tri1->math_normal()->length()*tri2->math_normal()->length()));
+	}
+	else
+	{
+		_angle=0;
+	}
+	
+}

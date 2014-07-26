@@ -45,6 +45,7 @@ public:
   int operator<(const MathVector &v2) const;
 
   static double length(const MathVector *v1, const MathVector *v2);
+  static double length2(const MathVector *v1, const MathVector *v2);
   static void add(const MathVector *v1, const MathVector *v2, 
 		  MathVector *result);
   static void sub(const MathVector *v1, const MathVector *v2, 

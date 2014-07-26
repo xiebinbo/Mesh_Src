@@ -168,16 +168,30 @@ void PLY_Mesh::write(FILE *f, const char *comment)
 	fprintf(f, "property float x\n");
 	fprintf(f, "property float y\n");
 	fprintf(f, "property float z\n");
+
+	fprintf(f, "property uchar red\n");
+	fprintf(f, "property uchar green\n");
+	fprintf(f, "property uchar blue\n");
+	fprintf(f, "property uchar alpha\n");
+
 	fprintf(f, "element face %i\n", tri_nr);
 	fprintf(f, "property list uchar int vertex_indices\n");
 	fprintf(f, "end_header\n");
 
 	n=0;    // vertices
+	//for (iv=vertices->begin(); iv != vertices->end(); iv++)
+	//{
+	//	/*calc_original_coordinates(*iv, &v);
+	//	fprintf(f,"%f %f %f\n", v.x(), v.y(), v.z());*/
+	//	fprintf(f,"%f %f %f\n", (*iv)->x(), (*iv)->y(), (*iv)->z());
+	//	(*iv)->number=++n;
+	//}
+
 	for (iv=vertices->begin(); iv != vertices->end(); iv++)
 	{
 		/*calc_original_coordinates(*iv, &v);
 		fprintf(f,"%f %f %f\n", v.x(), v.y(), v.z());*/
-		fprintf(f,"%f %f %f\n", (*iv)->x(), (*iv)->y(), (*iv)->z());
+		fprintf(f,"%f %f %f %d %d %d %d\n", (*iv)->math_newdata()->v[0], (*iv)->math_newdata()->v[1], (*iv)->math_newdata()->v[2],(*iv)->color[0],(*iv)->color[1],(*iv)->color[2],255);
 		(*iv)->number=++n;
 	}
 
